@@ -1,20 +1,21 @@
-﻿
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="login.aspx.cs" Inherits="login" %>
+
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
     <title>online shopping</title>
     <link rel="stylesheet" href="assets/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" type="text" href="assets/bootstrap/fonts/glyphicons-halflings-regular.svg">
+    <link  rel="stylesheet" type="text" href="assets/bootstrap/fonts/glyphicons-halflings-regular.svg">
     
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </head>
 <body>
-   <!---------------------header---------------->
+    <!---------------------header---------------->
    <div id="container">
     <header id="header" class="clearfix">
         <div class="logo">
@@ -34,23 +35,21 @@
        <!---------------banner------------------->
         <div id="banner">
             <img src="assets/image/banner.jpg">
-            <div class="form"> 
+     <div class="form"> 
                <div class="wrapper">
                    <div class="inner-wrapper">
-                <form action="#">
+                <form action="#" runat="server">
              <ul>
-                 <li><input type="text" placeholder="First Name"></li>
-                 <li><input type="text" placeholder="Last Name"></li>
-                 <li><input type="email" placeholder="Email"></li>
-                 <li><input type="password"placeholder="Password"></li>
-                 <li><input type="submit" value="Sign Up" class="button1"></li>
+                 <li><asp:TextBox ID="TextBox1" runat="server" placeholder="Email" ></asp:TextBox></li>
+                 <li><asp:TextBox ID="TextBox3" runat="server" placeholder="Password"></asp:TextBox></li>
+                 
+                 <li><asp:Button text="Sign In" class="button1" OnClick="loginBtn" runat="server"/></li>
                  
              </ul>
                 </form>
                    </div>
                </div>
-            </div>   
-                
+            </div> 
             <div class="heading">
                 <p>Welcome To Your Store!</p>
             </div>
@@ -200,24 +199,7 @@
         </div>
     </section>
          
-          <!-----------------my stories section---------------->
-<!--
-           <section id="my_stories">
-               <div class="container">
-                   <div class="row">
-                       <div class="col-lg-12 text-center">
-                           <h2 class="section-description">TEAM</h2>
-                           <h3 class="section-subdescription">Our Best Team</h3>
-                       </div>
-                   </div>
-                   <div class="row">
-                       <div class="col-md-6"></div>
-                       <div class="col-md-6"></div>
-
-                   </div>
-               </div>
-           </section>
--->
+          
            
            <!-----------------gallery section------------------>
            <section id="gallery">

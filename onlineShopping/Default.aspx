@@ -1,13 +1,15 @@
-﻿
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>
+
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head runat="server">
     <meta charset="UTF-8">
     <title>online shopping</title>
     <link rel="stylesheet" href="assets/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" type="text" href="assets/bootstrap/fonts/glyphicons-halflings-regular.svg">
+    <link  rel="stylesheet" type="text" href="assets/bootstrap/fonts/glyphicons-halflings-regular.svg">
     
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -37,13 +39,16 @@
             <div class="form"> 
                <div class="wrapper">
                    <div class="inner-wrapper">
-                <form action="#">
+                <form action="#" runat="server">
              <ul>
-                 <li><input type="text" placeholder="First Name"></li>
-                 <li><input type="text" placeholder="Last Name"></li>
-                 <li><input type="email" placeholder="Email"></li>
-                 <li><input type="password"placeholder="Password"></li>
-                 <li><input type="submit" value="Sign Up" class="button1"></li>
+                 <li><asp:TextBox ID="TextBox1" runat="server" placeholder="First Name" ></asp:TextBox></li>
+                 <li>
+                     <asp:TextBox ID="TextBox2" runat="server" placeholder="Last Name"></asp:TextBox></li>
+                 <li>
+                     <asp:TextBox ID="TextBox3" runat="server" placeholder="Email"></asp:TextBox></li>
+                 <li><asp:TextBox ID="TextBox4" runat="server" TextMode="Password" placeholder="Password"></asp:TextBox></li>
+                 <li><asp:Button text="Sign Up" class="button1" onclick="SignBtn" runat="server"/></li>
+                 <li><asp:Label runat="server"><a href="login.aspx">Sign In Here...</a></asp:Label></li>
                  
              </ul>
                 </form>
@@ -200,24 +205,7 @@
         </div>
     </section>
          
-          <!-----------------my stories section---------------->
-<!--
-           <section id="my_stories">
-               <div class="container">
-                   <div class="row">
-                       <div class="col-lg-12 text-center">
-                           <h2 class="section-description">TEAM</h2>
-                           <h3 class="section-subdescription">Our Best Team</h3>
-                       </div>
-                   </div>
-                   <div class="row">
-                       <div class="col-md-6"></div>
-                       <div class="col-md-6"></div>
-
-                   </div>
-               </div>
-           </section>
--->
+          
            
            <!-----------------gallery section------------------>
            <section id="gallery">
